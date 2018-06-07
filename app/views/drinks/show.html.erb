@@ -9,10 +9,22 @@
       <dd><%= @drink.name %></dd>
 
       <dt>Category</dt>
-      <dd><%= @drink.category_id %></dd>
+      <dd>
+        <% if @drink.category.present? %>
+          <a href="/categories/<%= @drink.category_id %>">
+            <%= @drink.category.name %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Brand</dt>
-      <dd><%= @drink.brand_id %></dd>
+      <dd>
+        <% if @drink.brand.present? %>
+          <a href="/brands/<%= @drink.brand_id %>">
+            <%= @drink.brand.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

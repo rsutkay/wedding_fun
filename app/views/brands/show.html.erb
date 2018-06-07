@@ -9,7 +9,13 @@
       <dd><%= @brand.name %></dd>
 
       <dt>Category</dt>
-      <dd><%= @brand.category_id %></dd>
+      <dd>
+        <% if @brand.category.present? %>
+          <a href="/categories/<%= @brand.category_id %>">
+            <%= @brand.category.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
