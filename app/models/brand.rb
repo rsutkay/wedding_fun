@@ -5,6 +5,8 @@ class Brand < ApplicationRecord
 
   # Validations
 
+  validates :category_id, :presence => true
+
   validates :name, :uniqueness => { :scope => [:category_id] }
 
   validates :name, :presence => true
