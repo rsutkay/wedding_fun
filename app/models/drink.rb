@@ -12,6 +12,10 @@ class Drink < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :votes,
+             :source => :user
+
   # Validations
 
   validates :brand_id, :presence => true
