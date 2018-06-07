@@ -5,6 +5,8 @@ class Vote < ApplicationRecord
 
   # Validations
 
+  validates :drink_id, :presence => true
+
   validates :user_id, :presence => true
 
 end
