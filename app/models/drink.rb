@@ -5,4 +5,6 @@ class Drink < ApplicationRecord
 
   # Validations
 
+  validates :name, :presence => true
+
 end
