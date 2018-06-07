@@ -1,6 +1,9 @@
 class Brand < ApplicationRecord
   # Direct associations
 
+  belongs_to :category,
+             :counter_cache => true
+
   has_many   :drinks,
              :dependent => :destroy
 

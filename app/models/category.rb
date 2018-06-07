@@ -1,6 +1,9 @@
 class Category < ApplicationRecord
   # Direct associations
 
+  has_many   :brands,
+             :dependent => :destroy
+
   has_many   :drinks,
              :dependent => :destroy
 
