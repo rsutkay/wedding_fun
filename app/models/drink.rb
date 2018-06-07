@@ -5,6 +5,8 @@ class Drink < ApplicationRecord
 
   # Validations
 
+  validates :category_id, :presence => true
+
   validates :name, :uniqueness => { :scope => [:brand_id, :category_id] }
 
   validates :name, :presence => true
