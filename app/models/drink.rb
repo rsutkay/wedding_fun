@@ -1,6 +1,9 @@
 class Drink < ApplicationRecord
   # Direct associations
 
+  belongs_to :brand,
+             :counter_cache => true
+
   has_many   :votes,
              :dependent => :destroy
 
